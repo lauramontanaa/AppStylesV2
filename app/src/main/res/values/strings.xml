@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">AppStylesV2</string>
+    <!--iniciar sesion-->
+    <string name="tvInicioSesion">Iniciar Sesion</string>
+    <string name="tvCorreo">Ingrese su correo</string>
+    <string name="tvContrasena">Ingrese su contraseña</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="tvCrearCuenta">Crear cuenta</string>
+    <!--crear cuenta-->
+    <string name="etNombre">Ingrese su nombre</string>
+    <string name="etNumCel">Ingrese su numero de celular</string>
+    <string name="etMail">Ingrese su correo</string>
+    <string name="etDireccion">Ingrese su direccion</string>
+    <string name="btnCrearCuenta">CrearCuenta</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="tvUser">Ingrese su usuario</string>
+    <!--compra-->
+    <string name="tvComprar">COMPRAR</string>
+    <string name="tvProductos">Productos</string>
+    <string name="tvDireccion">Dirección</string>
+    <string name="tvMetodoPago">Seleccione método de pago:</string>
+    <string name="spMetodoPago"></string>
+    <string-array name="metodosPago">
+        <item>Tarjeta Débito</item>
+        <item>Tarjeta Crédito</item>
+        <item>PSE</item>
+    </string-array>
+    <string name="tvInfoEnvio">La tienda se encarga de enviar el producto hasta la dirección establecida y al recibir el producto se realizará el pago de la forma seleccionada</string>
+    <string name="btnPedir">PEDIR</string>
+    <!--Bottom nav-->
+    <string name="itemPerfil">Perfil</string>
+    <string name="itemHome">Home</string>
+    <string name="itemCompras">Compras</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--perfil usuario-->
+    <string name="tvNombreUsuario">Nombre Usuario</string>
+    <string name="tvInformacion">Informacion</string>
+    <string name="tvTelefono">Telefono usuario</string>
+    <string name="tvMail">Correo usuario</string>
+    <string name="btnCambiarContrasena">Registrarse</string>
+    <!--cambiar contraseña-->
+    <string name="tvCambiarContrasena">Cambiar contraseña</string>
+    <string name="tvContrasenaActual">Ingrese su contraseña actual</string>
+    <string name="tvNuevaContrasena">Ingrese nueva contraseña</string>
+    <string name="tvConfirmarContrasena">Confirme nueva contraseña</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

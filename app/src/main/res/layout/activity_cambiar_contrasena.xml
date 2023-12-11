@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CambiarContrasena">
+
+    <TextView
+        android:id="@+id/tvCambiarContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:text="@string/tvCambiarContrasena" />
+
+    <TextView
+        android:id="@+id/tvContrasenaActual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/tvContrasenaActual" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <ImageView
+            android:id="@+id/imageViewq4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/bloquear" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="@string/tvContrasenaActual" />
+
+    </TableRow>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvContrasenaNueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/tvNuevaContrasena" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/bloquear" />
+
+        <EditText
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/tvNuevaContrasena"
+            android:layout_weight="2"/>
+
+    </TableRow>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvConfirmarContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/tvConfirmarContrasena" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        >
+        <ImageView
+            android:id="@+id/imageVi5ew4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/bloquear" />
+
+        <EditText
+            android:id="@+id/gy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp"
+            android:inputType="text"
+            android:hint="@string/tvConfirmarContrasena" />
+
+    </TableRow>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="300dp"
+        android:paddingHorizontal="10dp">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/rosa2"
+            android:textSize="20dp"
+            android:minHeight="48dp"
+            android:backgroundTint="@android:color/transparent"
+            android:text="@string/btnCancelar" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/rosa2"
+            android:textSize="20dp"
+            android:minHeight="48dp"
+            android:layout_weight="1"
+            android:text="@string/btnGuardar" />
+    </TableRow>
+
+</LinearLayout>

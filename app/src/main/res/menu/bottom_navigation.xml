@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/casa"
+        android:tooltipText="Perfil"
+        android:contentDescription="@string/itemHome"
+        android:title="Home">
+    </item>
+
+    <item
+        android:id="@+id/comprasFragment"
+        android:icon="@drawable/iv_productos"
+        android:tooltipText="Perfil"
+        android:contentDescription="@string/itemCompras"
+        android:title="Compras">
+    </item>
+
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/usuario"
+        android:tooltipText="Perfil"
+        android:contentDescription="@string/itemPerfil"
+        android:title="Perfil">
+    </item>
+</menu>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentPerfil">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".PerfilUsuario">
+
+        <ImageView
+            android:id="@+id/ivRegresar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/volver"
+            tools:ignore="ExtraText"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/ivlogo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/iv_logo" />
+
+            <TextView
+                android:id="@+id/tvPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/tvNombreUsuario"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp" />
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvCrearNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/tvInformacion" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/usuario" />
+
+            <TextView
+                android:id="@+id/editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginStart="8dp"
+                android:layout_weight="2"
+                android:minHeight="48dp"
+                android:inputType="text"
+                android:textSize="22dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tvNombreUsuario"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            >
+            <ImageView
+                android:id="@+id/imageViewq4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/telefono" />
+
+            <TextView
+                android:id="@+id/editTextText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:textSize="22dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tvTelefono" />
+
+        </TableRow>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/imageView44"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/mapa" />
+
+            <TextView
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textSize="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/tvDireccion"
+                android:layout_weight="2"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            >
+            <ImageView
+                android:id="@+id/imageVi5ew4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/correo" />
+
+            <TextView
+                android:id="@+id/gy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="2"
+                android:minHeight="48dp"
+                android:layout_marginStart="8dp"
+                android:textSize="22dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:text="@string/tvMail" />
+
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnCambiarContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/rosa2"
+            android:textSize="20dp"
+            android:shadowColor="@color/rosa"
+            android:backgroundTint="@android:color/transparent"
+            android:text="@string/btnCambiarContrasena" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CrearCuenta">
+
+    <ImageView
+        android:id="@+id/ivLogoPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:srcCompat="@drawable/icono" />
+
+    <TextView
+        android:id="@+id/tvCrearCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/tvCrearCuenta"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvCrearNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/etNombre" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/usuario" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginStart="8dp"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="@string/etNombre"/>
+
+    </TableRow>
+    <TextView
+        android:id="@+id/tvNumCel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/etNumCel" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <ImageView
+            android:id="@+id/imageViewq4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/telefono" />
+
+        <EditText
+            android:id="@+id/etCelu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="@string/etNumCel" />
+
+    </TableRow>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/etDireccion" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mapa" />
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/etDireccion"
+            android:layout_weight="2"/>
+
+    </TableRow>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/tvCorreo" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <ImageView
+            android:id="@+id/imageVi5ew4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/correo" />
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp"
+            android:inputType="text"
+            android:hint="@string/tvCorreo" />
+
+    </TableRow>
+    <TextView
+        android:id="@+id/tvContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/tvContrasena" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <ImageView
+            android:id="@+id/ivContra"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/bloquear" />
+
+        <EditText
+            android:id="@+id/etCrearContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:layout_marginStart="8dp"
+            android:inputType="text"
+            android:hint="@string/tvContrasena" />
+
+    </TableRow>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:paddingHorizontal="10dp">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/rosa2"
+            android:text="@string/btnCancelar" />
+
+        <Button
+            android:id="@+id/btnRegistrarCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/rosa2"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/btnCrearCuenta" />
+    </TableRow>
+</LinearLayout>

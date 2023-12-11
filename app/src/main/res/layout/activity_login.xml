@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:innerRadius="20dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:srcCompat="@drawable/iv_logo" />
+
+    <TextView
+        android:id="@+id/tvInicioSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="@string/tvInicioSesion" />
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/tvUser" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:paddingHorizontal="10dp">
+        <ImageView
+            android:id="@+id/ivUsuario"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/usuario" />
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:layout_marginEnd="5dp"
+            android:hint="@string/tvCorreo"
+            />
+    </TableRow>
+    <TextView
+        android:id="@+id/tvContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/tvContrasena" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:paddingHorizontal="10dp">
+        <ImageView
+            android:id="@+id/ivCandado"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/bloquear" />
+
+        <EditText
+            android:id="@+id/etContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginEnd="5dp"
+            android:hint="@string/tvContrasena"
+            android:layout_weight="2"
+            android:minHeight="48dp"
+            android:inputType="textPassword" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:textSize="20sp"
+        android:textColor="@color/azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/tvCrearCuenta"
+        android:layout_marginStart="20dp"
+        android:autoLink="all" />
+    <Button
+        android:id="@+id/btnIngresar"
+        android:backgroundTint="@color/rosa2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:minHeight="48dp"
+        android:text="@string/btnIngresar" />
+
+</LinearLayout>
