@@ -2,7 +2,7 @@ package com.example.appstylesv2.model;
 
 import java.io.Serializable;
 
-public class Clothes {
+public class Clothes implements Serializable{
     private String clo_id;
     private String clo_name;
     private String clo_price;

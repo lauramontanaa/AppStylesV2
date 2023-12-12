@@ -37,7 +37,7 @@
     <string name="tvInformacion">Informacion</string>
     <string name="tvTelefono">Telefono usuario</string>
     <string name="tvMail">Correo usuario</string>
-    <string name="btnCambiarContrasena">Registrarse</string>
+    <string name="btnEditarUser">Editar Usuario</string>
     <!--cambiar contraseña-->
     <string name="tvCambiarContrasena">Cambiar contraseña</string>
     <string name="tvContrasenaActual">Ingrese su contraseña actual</string>
@@ -45,4 +45,7 @@
     <string name="tvConfirmarContrasena">Confirme nueva contraseña</string>
     <string name="btnGuardar">Guardar</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--ver producto cv-->
+    <string name="btnAgregarProducto">AGREGAR PRODUCTO</string>
+    <string name="btnComprarProducto">COMPRAR PRODUCTO</string>
 </resources>

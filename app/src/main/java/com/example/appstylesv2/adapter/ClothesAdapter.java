@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -16,13 +17,13 @@ import com.example.appstylesv2.model.Clothes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHolder> {
+public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHolder> implements View.OnClickListener{
     private ArrayList<Clothes> clothesList;
-    private Context context;
-//
-    public ClothesAdapter(ArrayList<Clothes> clothesList, Context context) {
+
+    private View.OnClickListener listener;
+    public ClothesAdapter(ArrayList<Clothes> clothesList) {
         this.clothesList = clothesList;
-        this.context = context;
+
     }
 
     @NonNull
@@ -30,7 +31,8 @@ public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup parent,
                                                         int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.clothes_view, parent, false);
+                .inflate(R.layout.clothes_view, null, false);
+        view.setOnClickListener(this);
         return (new ViewHolder(view));
     }
     @Override
@@ -46,7 +48,20 @@ public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHold
         return clothesList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    @Override
+    public void onClick(View v) {
+        if (listener != null){
+            listener.onClick(v);
+        }else{
+            Toast.makeText(v.getContext(), "???", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void setOnClickListener(View.OnClickListener onClickListener){
+        this.listener = onClickListener;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView tvClo_id;
         public TextView tvClo_name;
         public TextView tvClo_price;

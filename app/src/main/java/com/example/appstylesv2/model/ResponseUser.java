@@ -1,16 +1,16 @@
 package com.example.appstylesv2.model;
 
+import java.util.ArrayList;
+
 public class ResponseUser {
-    private String response;
+    public ArrayList<User> users;
 
-    public ResponseUser() {
+    public ArrayList<User> getUsers() {
+        return users;
     }
 
-    public String getResponse() {
-        return response;
+    public void setUsers(ArrayList<User> users) {
+        this.users = users;
     }
 
-    public void setResponse(String response) {
-        this.response = response;
-    }
 }

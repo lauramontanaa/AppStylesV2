@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.appstylesv2.api.ServiceCrearUsuario;
+import com.example.appstylesv2.api.ServiceUsers;
 import com.example.appstylesv2.model.ResponseUser;
 import com.example.appstylesv2.model.User;
 import com.example.appstylesv2.remote.ClienteRetrofit;
@@ -49,7 +49,7 @@ public class CrearCuenta extends AppCompatActivity {
         user.setUse_password(this.use_password.getText().toString());
         retrofit = ClienteRetrofit.getClient(BASE_URL);
         //Toast.makeText(CrearCuenta.this, "Funciono", Toast.LENGTH_SHORT).show();
-        Call<ResponseUser> call = ServiceCrearUsuario.createUser(user);
+        Call<ResponseUser> call = ServiceUsers.createUser(user);
         call.enqueue(new Callback<ResponseUser>() {
                 @Override
             public void onResponse(Call<ResponseUser> call, Response<ResponseUser> response) {

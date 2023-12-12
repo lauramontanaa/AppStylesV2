@@ -2,11 +2,11 @@ package com.example.appstylesv2.fragments;
 
 import static com.example.appstylesv2.api.ValuesApi.BASE_URL;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +14,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.example.appstylesv2.R;
@@ -23,13 +22,7 @@ import com.example.appstylesv2.api.ServiceClothes;
 import com.example.appstylesv2.model.Clothes;
 import com.example.appstylesv2.model.ResponseClothes;
 import com.example.appstylesv2.remote.ClienteRetrofit;
-import com.facebook.shimmer.ShimmerFrameLayout;
-import com.google.android.material.snackbar.Snackbar;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -41,6 +34,7 @@ public class FragmentHome extends Fragment {
     private ResponseClothes responseClothes;
     private RecyclerView recyclerView;
     private ClothesAdapter clothesAdapter;
+    FragmentClothesView clothesView;
     public FragmentHome() {
         // Required empty public constructor
     }
@@ -59,9 +53,9 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_clothes);
+        recyclerView = view.findViewById(R.id.recycler_view_clothes);
         //recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),1));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         showClothes();
         return view;
     }
@@ -71,16 +65,36 @@ public class FragmentHome extends Fragment {
         ServiceClothes serviceClothes = retrofit.create(ServiceClothes.class);
         Call <ResponseClothes> call = serviceClothes.accessClothes();
         call.enqueue(new Callback<ResponseClothes>() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<ResponseClothes> call, Response<ResponseClothes> response) {
                 if (response.isSuccessful()){
                     ResponseClothes body = response.body();
                     clothes = body.getClothes();
-                    clothesAdapter = new ClothesAdapter(clothes,getContext());
+                    clothesAdapter = new ClothesAdapter(clothes);
+                    clothesAdapter.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            //Log.i("CLICK", "onClick: sifdghlskdhfglkshdlkfg");
+                            //Toast.makeText(getContext(), "haciendo clc", Toast.LENGTH_SHORT).show();
+                            Clothes clothes1;
+                            //OBJETO
+                            clothes1 = clothes.get(recyclerView.getChildAdapterPosition(v));
+                            if (clothes1 != null && (clothes1.toString().length()>0)){
+
+                                clothesView = new FragmentClothesView();
+                                Bundle bundleServicio = new Bundle();
+                                bundleServicio.putSerializable("dataClothes", clothes1);
+                                clothesView.setArguments(bundleServicio);
+                                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                                transaction.replace(R.id.frame_container,clothesView).addToBackStack(null).commit();
+
+
+                            }
+                        }
+
+                    });
                     recyclerView.setAdapter(clothesAdapter);
-                    Toast.makeText(getContext(),""+response.body().getClothes(), Toast.LENGTH_LONG).show();
-                    //ArrayList<Clothes> clothes = body.getClothes();
                 }else{
                     Toast.makeText(getContext(),"Error: "+response.message(),Toast.LENGTH_LONG).show();
                 }
